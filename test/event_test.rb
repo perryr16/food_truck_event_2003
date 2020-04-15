@@ -12,21 +12,17 @@ class EventTest < Minitest::Test
     assert_instance_of Event, event
   end
 
+  def test_it_returns_attributes
+    event = Event.new("South Pearl Street Farmers Market")
+    assert_equal "South Pearl Street Farmers Market", event.name
+
+  end
+
 end
+
 #
-#require './lib/item'
-# #=> true
-#
-#require './lib/food_truck'
-# #=> true
-#
-#require './lib/event'
-# #=> true
-#
-#event = Event.new("South Pearl Street Farmers Market")
 # #=> #<Event:0x00007fe134933e20...>
 #
-#event.name
 # #=> "South Pearl Street Farmers Market"
 #
 #event.food_trucks
