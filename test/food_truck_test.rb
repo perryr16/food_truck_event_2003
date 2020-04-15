@@ -30,7 +30,8 @@ class FoodTruckTest < Minitest::Test
     food_truck = FoodTruck.new("Rocky Mountain Pies")
     assert_equal 0, food_truck.check_stock(item1)
     food_truck.stock(item1, 30)
-    assert_equal [item1], food_truck.inventory
+    expected = {item1 => 30}
+    assert_equal expected, food_truck.inventory
     assert_equal 30, food_truck.check_stock(item1)
 
 
