@@ -20,5 +20,9 @@ class FoodTruck
     @inventory.sum {|item, count| item.price * count}
   end
 
+  def sell(item, count)
+    @inventory[item] -= count
+  end
+
 
 end
