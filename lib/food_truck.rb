@@ -21,7 +21,9 @@ class FoodTruck
   end
 
   def sell(item, count)
+    # binding.pry
     @inventory[item] -= count
+    # binding.pry
   end
 
 

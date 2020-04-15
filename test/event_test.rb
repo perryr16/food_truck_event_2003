@@ -223,6 +223,7 @@ class EventTest < Minitest::Test
 
     assert_equal false, event.sell(item1, 200)
     assert_equal false, event.sell(item5, 1)
+    
     assert_equal true, event.sell(item4, 5)
     assert_equal 45, food_truck2.check_stock(item4)
 
