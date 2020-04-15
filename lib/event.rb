@@ -49,5 +49,22 @@ class Event
     date.strftime("%d/%m/%Y")
   end
 
+  def sell(item, count)
+    if total_inventory[item][:quantity] > count
+      total_inventory[item][:food_trucks].each do |truck|
+
+        items_sold = truck.inventory[item] if truck.inventory[item] < count
+        items_sold = count if truck.inventory[item] > count
+
+        truck.sell(item, items_sold)
+        count -= items_sold
+        end
+      true
+    else
+      false
+    end
+  end
+
+
 
 end
