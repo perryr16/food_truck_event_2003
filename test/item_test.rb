@@ -18,12 +18,3 @@ class ItemTest < Minitest::Test
   end
 
 end
-
-
-# #=> #<Item:0x007f9c56740d48...>
-#
-# #=> #<Item:0x007f9c565c0ce8...>
-#
-# #=> "Apple Pie (Slice)"
-#
-# #=> 2.50

@@ -42,11 +42,3 @@ class FoodTruckTest < Minitest::Test
   end
 
 end
-
-
-#
-#
-# #=> 55
-#
-#
-# #=> {#<Item:0x007f9c56740d48...> => 55, #<Item:0x007f9c565c0ce8...> => 12}
