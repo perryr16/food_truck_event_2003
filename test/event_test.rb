@@ -82,9 +82,9 @@ class EventTest < Minitest::Test
     event.add_food_truck(food_truck2)
     event.add_food_truck(food_truck3)
     expected = [food_truck1, food_truck3]
-    event.food_trucks_that_sell(item1)
+    assert_equal expected, event.food_trucks_that_sell(item1)
     expected = [food_truck2]
-    event.food_trucks_that_sell(item4)
+    assert_equal expected, event.food_trucks_that_sell(item4)
   end
 
   def test_it_returns_revenue_of_trucks
@@ -223,7 +223,7 @@ class EventTest < Minitest::Test
 
     assert_equal false, event.sell(item1, 200)
     assert_equal false, event.sell(item5, 1)
-    
+
     assert_equal true, event.sell(item4, 5)
     assert_equal 45, food_truck2.check_stock(item4)
 
