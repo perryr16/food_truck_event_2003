@@ -45,7 +45,7 @@ class Event
   end
 
   def date
-    date = Time.new
+    date = Date.today
     date.strftime("%d/%m/%Y")
   end
 

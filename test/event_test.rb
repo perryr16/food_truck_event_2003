@@ -214,21 +214,7 @@ class EventTest < Minitest::Test
 end
 
 
-#
-# #=> #<Item:0x007f9c56740d48...>
-#
-# #=> #<Item:0x007f9c565c0ce8...>
-#
-# #=> #<Item:0x007f9c562a5f18...>
-#
-# #=> #<Item:0x007f9c56343038...>
-#
-# #=> #<Item:0x007f9c561636c8...>
-#
-# #=> #<Event:0x00007fe134933e20...>
-#
-# #=> "24/02/2020"
-#
+
 # # A event will now be created with a date - whatever date the event is created on through the use of `Date.today`. The addition of a date to the event should NOT break any previous tests.  The `date` method will return a string representation of the date - 'dd/mm/yyyy'. We want you to test this in with a date that is IN THE PAST. In order to test the date method in a way that will work today, tomorrow and on any date in the future, you will need to use a stub :)
 #
 #food_truck1 = FoodTruck.new("Rocky Mountain Pies")
