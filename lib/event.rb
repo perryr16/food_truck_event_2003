@@ -40,5 +40,14 @@ class Event
     overstocked_items
   end
 
+  def sorted_item_list
+    total_inventory.map { |item, details| item.name}.sort
+  end
+
+  def date
+    date = Time.new
+    date.strftime("%d/%m/%Y")
+  end
+
 
 end
