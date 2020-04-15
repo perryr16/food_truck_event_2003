@@ -20,16 +20,16 @@ class FoodTruckTest < Minitest::Test
     assert_equal "Rocky Mountain Pies", food_truck.name
   end
 
+  def test_it_returns_and_adds_inventory
+    food_truck = FoodTruck.new("Rocky Mountain Pies")
+    
+    assert_equal ({}), food_truck.inventory
+  end
+
 end
 
 
 
-# #=> #<FoodTruck:0x00007f85683152f0...>
-#
-# #=> "Rocky Mountain Pies"
-#    food_truck.inventory
-# #=> {}
-#
 #food_truck.check_stock(item1)
 # #=> 0
 #
