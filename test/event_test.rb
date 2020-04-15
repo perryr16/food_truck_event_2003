@@ -15,17 +15,16 @@ class EventTest < Minitest::Test
   def test_it_returns_attributes
     event = Event.new("South Pearl Street Farmers Market")
     assert_equal "South Pearl Street Farmers Market", event.name
+  end
 
+  def test_it_adds_food_trucks
+    event = Event.new("South Pearl Street Farmers Market")
+    assert_equal [], event.food_trucks
   end
 
 end
 
-#
-# #=> #<Event:0x00007fe134933e20...>
-#
-# #=> "South Pearl Street Farmers Market"
-#
-#event.food_trucks
+
 # #=> []
 #
 #food_truck1 = FoodTruck.new("Rocky Mountain Pies")
